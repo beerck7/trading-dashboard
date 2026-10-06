@@ -9,7 +9,9 @@ export function getDataMode() {
 }
 
 export async function getCandles(symbol: AssetSymbol, timeframe: Timeframe) {
-  return getDataMode() === "demo" ? getDemoCandles(symbol, timeframe) : getLiveCandles(symbol, timeframe);
+  return getDataMode() === "demo"
+    ? getDemoCandles(symbol, timeframe)
+    : getLiveCandles(symbol, timeframe);
 }
 
 export async function getMarkets() {

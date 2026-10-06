@@ -41,17 +41,13 @@ h1, h2, h3, p, figure { margin: 0; }
 .project-note p { font-size: 12px; line-height: 1.7; color: var(--muted); margin: 8px 0 15px; }
 .project-note a { display: flex; align-items: center; gap: 8px; font-size: 12px; color: var(--accent); }
 .profile { display: flex; align-items: center; gap: 10px; padding-top: 18px; border-top: 1px solid var(--line); }
-.avatar { display: inline-flex; flex-shrink: 0; align-items: center; justify-content: center; width: 33px; height: 33px; border-radius: 50%; background: #26302b; color: #d4dfc9; font-size: 12px; font-weight: 600; }
-.profile strong, .profile span:not(.avatar):not(.profile-status) { display: block; font-size: 12px; }
+.profile strong, .profile span { display: block; font-size: 12px; }
 .profile div > span { color: var(--muted); margin-top: 5px; }
-.profile-status { width: 5px; height: 5px; border-radius: 50%; background: var(--accent); margin-left: auto; }
 .workspace { margin-left: 220px; }
 .topbar { display: flex; justify-content: space-between; align-items: center; padding: 0 36px; height: 74px; border-bottom: 1px solid var(--line); }
 .breadcrumb { display: flex; align-items: center; gap: 13px; color: var(--muted); font-size: 12px; }
 .breadcrumb span { color: #d4dcdb; }
 .topbar-right { display: flex; align-items: center; gap: 22px; }
-.topbar-divider { width: 1px; height: 22px; background: var(--line); }
-.small-avatar { width: 29px; height: 29px; }
 .api-status { display: inline-flex; align-items: center; gap: 7px; color: #c5d0c3; font-size: 12px; }
 .api-status > span { width: 5px; height: 5px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 3px #c5e9870a; }
 .api-status.offline > span { background: var(--negative); }
@@ -238,7 +234,6 @@ td > .sparkline { display: inline-block; width: 100px; height: 28px; vertical-al
   .mobile-nav .nav-label { margin-top: 3px; }
   .topbar { height: 49px; padding-inline: 20px; }
   .topbar-right { gap: 0; }
-  .topbar-divider, .small-avatar { display: none; }
   .breadcrumb { font-size: 12px; gap: 7px; }
   .api-status { font-size: 12px; }
   main { padding: 27px 16px 20px; }

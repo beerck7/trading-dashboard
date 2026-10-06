@@ -12,9 +12,16 @@ const inter = localFont({
 
 export const metadata: Metadata = {
   title: "Signal — Trading Analytics Dashboard",
-  description: "Track cryptocurrency prices, interactive charts, market activity and your watchlist with data from Binance Spot.",
+  description:
+    "Track cryptocurrency prices, interactive charts, market activity and your watchlist with data from Binance Spot.",
 };
 
-export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
-  return <html lang="en"><body className={inter.variable}>{children}</body></html>;
+export default function RootLayout({
+  children,
+}: Readonly<{ children: React.ReactNode }>) {
+  return (
+    <html lang="en">
+      <body className={inter.variable}>{children}</body>
+    </html>
+  );
 }

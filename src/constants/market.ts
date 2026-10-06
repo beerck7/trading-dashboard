@@ -1,10 +1,34 @@
 import type { AssetSymbol, Timeframe } from "@/types/market";
 
 export const ASSETS = [
-  { symbol: "BTCUSDT", ticker: "BTC", name: "Bitcoin", mark: "₿", color: "#f5a745" },
-  { symbol: "ETHUSDT", ticker: "ETH", name: "Ethereum", mark: "Ξ", color: "#a6a9ef" },
-  { symbol: "SOLUSDT", ticker: "SOL", name: "Solana", mark: "◎", color: "#8ddac1" },
-  { symbol: "BNBUSDT", ticker: "BNB", name: "BNB", mark: "◇", color: "#ead16b" },
+  {
+    symbol: "BTCUSDT",
+    ticker: "BTC",
+    name: "Bitcoin",
+    mark: "₿",
+    color: "#f5a745",
+  },
+  {
+    symbol: "ETHUSDT",
+    ticker: "ETH",
+    name: "Ethereum",
+    mark: "Ξ",
+    color: "#a6a9ef",
+  },
+  {
+    symbol: "SOLUSDT",
+    ticker: "SOL",
+    name: "Solana",
+    mark: "◎",
+    color: "#8ddac1",
+  },
+  {
+    symbol: "BNBUSDT",
+    ticker: "BNB",
+    name: "BNB",
+    mark: "◇",
+    color: "#ead16b",
+  },
 ] as const;
 
 export const TIMEFRAMES = [

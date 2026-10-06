@@ -12,7 +12,9 @@ const options = {
   dedupingInterval: 5_000,
   errorRetryCount: 2,
   errorRetryInterval: 3_000,
-  shouldRetryOnError: (error: Error) => error instanceof ApiError && (error.status === 408 || error.status === 429 || error.status >= 500),
+  shouldRetryOnError: (error: Error) =>
+    error instanceof ApiError &&
+    (error.status === 408 || error.status === 429 || error.status >= 500),
 };
 
 export function useMarkets() {
@@ -20,6 +22,10 @@ export function useMarkets() {
 }
 
 export function useCandles(symbol: AssetSymbol, timeframe: Timeframe) {
-  // The full selection is the cache key. A new selection never displays the previous asset's data.
-  return useSWR(`/api/candles?symbol=${symbol}&timeframe=${timeframe}`, fetchCandles, options);
+  // Symbol i zakres tworzą klucz cache, aby nie wyświetlać danych poprzedniego wyboru.
+  return useSWR(
+    `/api/candles?symbol=${symbol}&timeframe=${timeframe}`,
+    fetchCandles,
+    options,
+  );
 }
